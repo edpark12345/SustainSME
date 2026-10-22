@@ -1084,3 +1084,8 @@ Applied throughout and must be maintained:
 ### 2026-10-22 - First Vercel deploy (personal hobby account)
 - Linked `app/` to new project `sophiacolville-7098/sustain-sme` and deployed to production: https://sustain-sme.vercel.app (Deployment Protection / Vercel login is on). Not the Accenture team project `acn-rx-geek-out/sustain_sme` (account not a team member).
 - GitHub auto-deploy NOT connected (needs a GitHub login connection on the Vercel account); redeploy with `vercel.cmd deploy --prod` from `app/`. `VITE_API_BASE` not set on Vercel, so no backend.
+
+### 2026-10-22 - Local folder connected to existing GitHub repo (marcus-accenture)
+- Installed GitHub CLI (winget), authenticated as marcus-accenture (WRITE on edpark12345/SustainSME). `git init` on `main`, origin `https://github.com/edpark12345/SustainSME.git`.
+- The remote already held this project (vercel.json, log entries, claude_client fix), so the stale local copy was reset to `origin/main` rather than pushed over it. Pre-reset local versions of 6 differing files backed up outside the repo.
+- Not committed: `start-local.bat` (machine-specific paths), sync artifact `.849C9593-*` (excluded via `.git/info/exclude`). No app code changed.
