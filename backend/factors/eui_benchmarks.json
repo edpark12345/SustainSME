@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "metric": "Electricity Use Intensity (screening) for estimating Scope 2 when no bill/meter exists",
+    "unit": "kWh/m2/yr (electricity only)",
+    "basis": "Screening benchmarks by building type. Electricity-only (heating estimated separately). Starter set cross-referenced to CIBSE TM46 / DEFRA display-energy benchmarks / EU building-stock averages.",
+    "source": "CIBSE TM46 & DEFRA display-energy benchmarks (screening starter set — validate before assurance)",
+    "note": "SCREENING GRADE ONLY. Intensity varies strongly with climate, building age and use — results built on these are flagged tier='estimated'. Replace this file (same shape) with a validated set.",
+    "year": 2023
+  },
+  "electricity_kwh_per_m2_yr": {
+    "office": 95,
+    "retail": 180,
+    "warehouse": 60,
+    "manufacturing": 250,
+    "hospitality": 220,
+    "other": 120,
+    "_default": 120
+  },
+  "heating_kwh_per_m2_yr": {
+    "office": 100,
+    "retail": 120,
+    "warehouse": 90,
+    "manufacturing": 150,
+    "hospitality": 200,
+    "other": 120,
+    "_default": 120
+  },
+  "m2_per_fte": {
+    "office": 15,
+    "retail": 25,
+    "warehouse": 60,
+    "manufacturing": 40,
+    "hospitality": 30,
+    "other": 20,
+    "_default": 15
+  }
+}

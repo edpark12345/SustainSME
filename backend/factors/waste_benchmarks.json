@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "metric": "Scope 3 Cat 5 waste — treatment emission factors, country treatment mix, and generation benchmarks",
+    "unit": "treatment_ef: kg CO2e per tonne; treatment_mix: share of tonnes (sum≈1); generation: kg per FTE per year",
+    "source": "DEFRA 2024 (treatment factors) + World Bank What a Waste (country treatment mix)",
+    "sources": {
+      "treatment_ef_kg_per_tonne": "UK DEFRA/DESNZ 2025 GHG Conversion Factors — Waste disposal (Commercial & industrial / Refuse). Recycling & incineration reflect DEFRA's disposal scope (transport-only / energy-recovery credited); landfill carries the methane burden.",
+      "treatment_mix_by_country": "World Bank 'What a Waste' Global Database (country dataset). Raw treatment shares consolidated into 4 buckets and renormalised to sum to 1 over reported methods.",
+      "generation_kg_per_fte_year": "Screening order-of-magnitude defaults for commercial waste per employee — NOT a single citable figure; the SME should provide actual tonnage for accuracy. REEB (Better Buildings Partnership) building intensities are the intended refinement source."
+    },
+    "raw_files": [
+      "sources/defra-ghg-conversion-factors-2025-flat-format.xlsx",
+      "sources/worldbank-what-a-waste-country-dataset.xlsx",
+      "sources/reeb-5-year-journey.pdf"
+    ],
+    "year": 2024
+  },
+  "treatment_ef_kg_per_tonne": {
+    "landfill": 520.53,
+    "incineration": 4.69,
+    "recycling": 4.69,
+    "composting": 8.98,
+    "anaerobic_digestion": 8.98,
+    "_source": "DEFRA 2024: C&I waste Landfill 520.53, Incineration w/ energy recovery 4.69; recycling open-loop 4.69; organic composting/AD 8.98 (kg CO2e/tonne)"
+  },
+  "treatment_mix_by_country": {
+    "DE": { "landfill": 0.014, "incineration": 0.295, "recycling": 0.470, "composting": 0.221 },
+    "GB": { "landfill": 0.095, "incineration": 0.468, "recycling": 0.270, "composting": 0.167 },
+    "FR": { "landfill": 0.241, "incineration": 0.333, "recycling": 0.240, "composting": 0.186 },
+    "IT": { "landfill": 0.201, "incineration": 0.206, "recycling": 0.323, "composting": 0.270 },
+    "NL": { "landfill": 0.014, "incineration": 0.411, "recycling": 0.281, "composting": 0.294 },
+    "CH": { "landfill": 0.000, "incineration": 0.478, "recycling": 0.285, "composting": 0.236 },
+    "ES": { "landfill": 0.622, "incineration": 0.127, "recycling": 0.218, "composting": 0.033 },
+    "PL": { "landfill": 0.382, "incineration": 0.210, "recycling": 0.268, "composting": 0.140 },
+    "US": { "landfill": 0.491, "incineration": 0.117, "recycling": 0.241, "composting": 0.151 },
+    "_world_default": { "landfill": 0.600, "incineration": 0.110, "recycling": 0.190, "composting": 0.100 }
+  },
+  "generation_kg_per_fte_year": {
+    "office": 150,
+    "retail": 250,
+    "warehouse": 100,
+    "manufacturing": 400,
+    "hospitality": 300,
+    "other": 180,
+    "_default": 180
+  }
+}

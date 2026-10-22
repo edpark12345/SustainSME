@@ -1,0 +1,21 @@
+# Dependencies / build output — rebuilt locally, never sync/commit these
+node_modules/
+app/node_modules/
+backend/.venv/
+.venv/
+dist/
+app/dist/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Local tooling / secrets / OS junk
+.claude/
+.env
+.env.local
+*.log
+Thumbs.db
+.DS_Store
+
+# Note: backend/factors/sources/*.xlsx are official source datasets and ARE tracked.

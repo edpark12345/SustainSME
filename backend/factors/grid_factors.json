@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "metric": "location-based grid emission factor",
+    "unit": "kgCO2e/kWh",
+    "basis": "Global. Country grid factors. India = CEA CO2 Baseline Database; others = IEA/Ember national averages.",
+    "source": "IEA Emission Factors (national grids); CEA CO2 Baseline Database v19 (India)",
+    "note": "Netherlands set to the IEA national location-based factor (0.2853 kgCO2e/kWh) to align with the 2024 reporting year (per SME review). Other countries retain their prior IEA/Ember national averages pending a country-by-country reporting-year refresh. Swap in a licensed IEA dataset (same shape) to complete.",
+    "year": 2024
+  },
+  "factors": {
+    "India": 0.71,
+    "United Kingdom": 0.207,
+    "United States": 0.371,
+    "Germany": 0.381,
+    "France": 0.056,
+    "Netherlands": 0.2853,
+    "China": 0.555,
+    "Australia": 0.66,
+    "Japan": 0.474,
+    "Spain": 0.151,
+    "Italy": 0.279,
+    "Brazil": 0.10,
+    "Canada": 0.12,
+    "_world_default": 0.475
+  }
+}

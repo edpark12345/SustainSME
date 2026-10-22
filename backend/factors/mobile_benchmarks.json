@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "metric": "Average annual road fuel per vehicle (screening) — to estimate mobile combustion when only vehicle count is known",
+    "unit": "litres/vehicle/yr",
+    "source": "Screening starter set (typical light-commercial averages) — validate before assurance",
+    "note": "SCREENING GRADE. Results built on this are flagged tier='estimated'.",
+    "year": 2023
+  },
+  "avg_litres_per_vehicle_yr": {
+    "diesel": 1800,
+    "petrol": 1400,
+    "_default": 1600
+  }
+}

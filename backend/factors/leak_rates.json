@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "metric": "Refrigerant fugitive estimation parameters (inventory tier)",
+    "note": "Used only when actual refill mass is unknown. annual_leak_rate = fraction of installed charge lost per year; charge_kg_per_tr = installed refrigerant charge per ton of refrigeration, to derive charge from cooling capacity.",
+    "source": "IPCC 2006 Vol.3; US EPA / GHG Protocol screening defaults",
+    "year": 2006
+  },
+  "default_annual_leak_rate": 0.10,
+  "charge_kg_per_tr": 0.7,
+  "annual_leak_rate_by_equipment": {
+    "split": 0.08,
+    "cassette": 0.08,
+    "vrf": 0.06,
+    "chiller": 0.07,
+    "window": 0.10,
+    "default": 0.10
+  }
+}

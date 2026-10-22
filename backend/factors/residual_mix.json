@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "metric": "Market-based Scope 2 residual-mix emission factor (direct CO2, production residual mix)",
+    "unit": "kgCO2/kWh",
+    "basis": "Residual mix = the generation mix left after tracked green attributes (GoOs/PPAs) are stripped out and sold separately. Per the GHG Protocol Scope 2 Guidance, MARKET-BASED accounting must use the residual mix for any consumption not covered by a contractual instrument — NOT the location-based grid average (which double-counts green attributes already sold to others). The residual mix is therefore higher than the location-based factor.",
+    "source": "AIB European Residual Mixes 2023 (Association of Issuing Bodies), Table 2 — direct CO2 g/kWh ÷ 1000",
+    "year": 2023,
+    "raw_file": "sources/AIB_2023_Residual_Mix_FINALResults.pdf",
+    "note": "Starter set — only a few countries are loaded (extracted from the AIB 2023 table). Values are DIRECT-CO2 production residual mix; verify vintage and whether upstream/CO2e is required for your reporting standard before assurance. Countries not listed fall back to the location-based grid factor with a warning (a conservative UNDERstatement of market-based). Add the remaining AIB countries here to complete coverage. SCREENING-GRADE — not an assured figure."
+  },
+  "factors": {
+    "Netherlands": 0.380,
+    "Italy": 0.501,
+    "Poland": 0.788
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "metric": "Scope 1 fuel combustion emission factors (CO2 + CH4 + N2O as CO2e)",
+    "basis": "UK DEFRA/DESNZ 2024 GHG conversion factors (flat file v1.1) — combustion factors matched to the 2024 reporting year. natural_gas/diesel/petrol are the DEFRA 2024 per-unit values; the remaining fuels retain IPCC 2006 defaults pending a DEFRA 2024 swap (flagged).",
+    "note": "co2e_kg_per_base_unit is the DIRECT (combustion, Scope 1) factor for the listed base_unit — it does NOT include upstream/WTT. ncv_gj_per_base_unit allows unit conversion when the input differs (energy = qty_in_base_unit x ncv). wtt_kg_co2e_per_base_unit is the well-to-tank (upstream) factor per base_unit for Scope 3 Cat 3, from UK DEFRA/DESNZ 2024 'WTT- fuels' (natural gas per m3, diesel/petrol average-biofuel-blend per litre). Fuels without a WTT value are skipped in Cat 3 with a warning.",
+    "source": "UK DEFRA/DESNZ 2024 GHG conversion factors (flat file v1.1)",
+    "year": 2024
+  },
+  "factors": {
+    "natural_gas": { "base_unit": "m3", "co2e_kg_per_base_unit": 2.04542, "ncv_gj_per_base_unit": 0.0373, "wtt_kg_co2e_per_base_unit": 0.3366, "aliases": ["scm", "sm3", "m3", "nm3"] },
+    "lshs":        { "base_unit": "tonne", "co2e_kg_per_base_unit": 3168.0, "ncv_gj_per_base_unit": 40.4, "aliases": ["heavy fuel oil", "rfo", "furnace oil"] },
+    "heating_oil": { "base_unit": "litre", "co2e_kg_per_base_unit": 2.54, "ncv_gj_per_base_unit": 0.0383, "aliases": ["gas oil", "hsd stationary"] },
+    "diesel":      { "base_unit": "litre", "co2e_kg_per_base_unit": 2.51279, "ncv_gj_per_base_unit": 0.0383, "wtt_kg_co2e_per_base_unit": 0.61101, "aliases": ["hsd", "gasoil"] },
+    "petrol":      { "base_unit": "litre", "co2e_kg_per_base_unit": 2.0844, "ncv_gj_per_base_unit": 0.0331, "wtt_kg_co2e_per_base_unit": 0.58094, "aliases": ["gasoline", "mogas"] },
+    "lpg":         { "base_unit": "kg", "co2e_kg_per_base_unit": 2.98, "ncv_gj_per_base_unit": 0.0473, "aliases": ["liquefied petroleum gas"] },
+    "propane":     { "base_unit": "kg", "co2e_kg_per_base_unit": 2.99, "ncv_gj_per_base_unit": 0.0473, "aliases": [] },
+    "coal":        { "base_unit": "kg", "co2e_kg_per_base_unit": 2.42, "ncv_gj_per_base_unit": 0.0258, "aliases": ["bituminous coal"] }
+  }
+}

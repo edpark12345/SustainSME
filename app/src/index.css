@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-surface-subtle text-ink antialiased;
+  }
+}
+
+@layer components {
+  .field-label {
+    @apply block text-sm font-medium text-ink-soft mb-1.5;
+  }
+  .text-input {
+    @apply w-full rounded-lg border border-surface-border bg-white px-3 py-2 text-sm text-ink
+      placeholder:text-ink-muted focus:border-accenture focus:outline-none focus:ring-2 focus:ring-accenture-100;
+  }
+  .card {
+    @apply rounded-xl border border-surface-border bg-white shadow-card;
+  }
+}
+
+.recharts-wrapper:focus,
+.recharts-surface:focus {
+  outline: none;
+}
+
+/* Print: show only the report (.print-area), hide app chrome and controls, and
+   keep brand background colours (e.g. the purple cover band). Used by the
+   "Download / Print" button on the report page → browser "Save as PDF". */
+@media print {
+  body {
+    background: #fff !important;
+  }
+  /* Hide everything, then reveal only the report and its contents. */
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    inset: 0;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100%;
+  }
+  /* Never print interactive chrome even if inside the print area. */
+  .no-print {
+    display: none !important;
+  }
+  /* Preserve background colours / gradients in print (Chrome/Edge/Firefox). */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  @page {
+    margin: 12mm;
+  }
+}

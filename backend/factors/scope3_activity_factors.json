@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "metric": "Activity-based Scope 3 factors for Cat 3 (energy WTT/T&D), Cat 6 (business travel), Cat 7 (commuting)",
+    "unit": "electricity: kg CO2e/kWh; travel modes: kg CO2e/passenger-km; hotel: kg CO2e/room-night",
+    "source": "UK DEFRA/DESNZ 2024 GHG Conversion Factors (WTT- UK electricity, T&D, Business travel- air/land, Hotel stay)",
+    "raw_file": "sources/defra-ghg-conversion-factors-2024-flat-format.xlsx",
+    "year": 2024,
+    "notes": [
+      "Cat 3 electricity = purchased grid kWh × (generation WTT + T&D losses + WTT of T&D).",
+      "Air factors include radiative forcing (RF) — DEFRA 'With RF', best practice for disclosure.",
+      "Travel/commuting are per passenger-km; hotel per room-night by country (default = Germany)."
+    ]
+  },
+  "electricity_wtt_td_kg_per_kwh": {
+    "wtt_generation": 0.0459,
+    "td_losses": 0.0183,
+    "wtt_of_td": 0.00397,
+    "combined": 0.06817,
+    "_note": "combined = wtt_generation + td_losses + wtt_of_td (kg CO2e per kWh of purchased grid electricity)"
+  },
+  "travel_modes_kg_per_pkm": {
+    "air_domestic": 0.27257,
+    "air_short_haul": 0.18592,
+    "air_long_haul": 0.26128,
+    "air_international": 0.1758,
+    "rail_national": 0.03546,
+    "rail_international": 0.00446,
+    "tram_metro": 0.0286,
+    "bus": 0.10846,
+    "coach": 0.02776,
+    "taxi": 0.14861,
+    "car_average": 0.16984,
+    "car_diesel": 0.17514,
+    "car_petrol": 0.19718,
+    "car_electric": 0.04745
+  },
+  "flight_wtt_kg_per_pkm": {
+    "air_domestic": 0.0335, "air_short_haul": 0.02286, "air_long_haul": 0.03213, "air_international": 0.02162,
+    "_note": "DEFRA 2024 'WTT- flights' — upstream (well-to-tank) of aviation fuel, per passenger-km. Scope 3 Cat 3, added on top of the Cat 6 combustion factor. Combustion air factors above are DEFRA 2024 'with RF' (radiative forcing), average passenger."
+  },
+  "hotel_kg_per_room_night_by_country": {
+    "GB": 10.4, "DE": 13.2, "FR": 6.7, "IT": 14.3, "NL": 14.8, "ES": 19.0,
+    "US": 16.0, "IN": 58.9, "CH": 13.2, "_default": 13.2
+  },
+  "commuting_defaults": {
+    "working_days_per_year": 220,
+    "avg_round_trip_km_per_day": 22,
+    "default_mode": "car_average",
+    "_source": "screening defaults; refine with a commuting survey (mode split + distance)"
+  }
+}

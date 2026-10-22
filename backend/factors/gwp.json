@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "metric": "Global Warming Potential (100-yr) for refrigerants",
+    "unit": "kgCO2e per kg refrigerant",
+    "source": "IPCC AR6 (2021) WG1 Ch.7, Table 7.SM.7 GWP100 — single-species values; blends (R410A/R404A/R407C/R507A) recomputed from their component GWPs by mass fraction",
+    "year": 2021,
+    "note": "Updated AR5 → AR6 GWP100. Single-species HFC/HCFC values are the IPCC AR6 figures; blend GWPs are computed from AR6 component values and standard ASHRAE mass compositions — verify blend compositions against the DEFRA workbook / refrigerant datasheet before assurance."
+  },
+  "factors": {
+    "R22": 1960,
+    "R410A": 2256,
+    "R32": 771,
+    "R134a": 1526,
+    "R404A": 4728,
+    "R407C": 1906,
+    "R507A": 4775,
+    "R290": 0.02,
+    "R717": 0,
+    "R744": 1
+  }
+}

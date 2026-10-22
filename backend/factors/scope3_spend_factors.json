@@ -1,0 +1,64 @@
+{
+  "_meta": {
+    "metric": "Spend-based (EEIO) Scope 3 emission factors for SME purchase categories",
+    "unit": "kg CO2e per USD (2022, purchaser price, incl. margins)",
+    "source": "US EPA Supply Chain GHG Emission Factors v1.3 (USEEIO, USD2022, GWP AR5) — 'with margins'",
+    "year": 2022,
+    "gwp": "IPCC AR5 GWP100",
+    "raw_file": "sources/epa-supply-chain-ghg-factors-v1.3-CO2e-USD2022.csv",
+    "notes": [
+      "Curated SME-friendly buckets; each maps to a representative 2017 NAICS-6 commodity factor.",
+      "'with margins' is used because SME spend is at purchaser prices.",
+      "Spend must be converted to USD 2022 before applying (see fx_to_usd_2022). This is a static, documented screening rate, not live FX — flagged as an assumption on every line.",
+      "Spend-based factors are screening quality (GHG Protocol tier 'spend'); replace with average-data or supplier-specific factors where the SME has physical/primary data.",
+      "USEEIO is US-economy based; used as a proxy where no EU (EXIOBASE) equivalent is loaded. Swappable by dropping in an EXIOBASE-derived file with the same shape."
+    ]
+  },
+  "fx_to_usd_2022": {
+    "USD": 1.0,
+    "EUR": 1.053,
+    "GBP": 1.237,
+    "CHF": 1.047,
+    "INR": 0.01271,
+    "_note": "Annual-average market rates for 2022 (1 unit of currency -> USD). Unlisted currencies are treated as USD with a warning."
+  },
+  "categories": {
+    "1": "Purchased goods & services",
+    "2": "Capital goods",
+    "4": "Upstream transportation & distribution",
+    "9": "Downstream transportation & distribution"
+  },
+  "factors": {
+    "legal_accounting_services":   { "label": "Legal, accounting & professional services", "kg_co2e_per_usd": 0.048, "naics": "5411/5412", "naics_title": "Offices of Lawyers / Accountants", "suggested_categories": [1] },
+    "consulting_management":       { "label": "Management & consulting services",          "kg_co2e_per_usd": 0.078, "naics": "541611", "naics_title": "Management Consulting Services", "suggested_categories": [1] },
+    "it_software_services":        { "label": "IT & software services",                    "kg_co2e_per_usd": 0.085, "naics": "541511", "naics_title": "Custom Computer Programming / Software", "suggested_categories": [1] },
+    "it_hosting_cloud_saas":       { "label": "Cloud, hosting & SaaS",                      "kg_co2e_per_usd": 0.093, "naics": "518210", "naics_title": "Data Processing, Hosting & Related Services", "suggested_categories": [1] },
+    "telecommunications":          { "label": "Telecommunications",                        "kg_co2e_per_usd": 0.078, "naics": "5173",   "naics_title": "Telecommunications Carriers", "suggested_categories": [1] },
+    "advertising_marketing":       { "label": "Advertising & marketing",                   "kg_co2e_per_usd": 0.085, "naics": "541810", "naics_title": "Advertising Agencies", "suggested_categories": [1] },
+    "financial_insurance":         { "label": "Financial & insurance services",            "kg_co2e_per_usd": 0.084, "naics": "52",     "naics_title": "Finance & Insurance (proxy)", "suggested_categories": [1] },
+    "real_estate_facility":        { "label": "Real estate & facility services",           "kg_co2e_per_usd": 0.246, "naics": "531210", "naics_title": "Offices of Real Estate Agents", "suggested_categories": [1] },
+    "repair_maintenance":          { "label": "Repair & maintenance services",             "kg_co2e_per_usd": 0.103, "naics": "811111", "naics_title": "General Automotive Repair (proxy)", "suggested_categories": [1] },
+    "food_catering":               { "label": "Food, beverages & catering",                "kg_co2e_per_usd": 0.150, "naics": "722320", "naics_title": "Caterers / Food Service", "suggested_categories": [1] },
+    "paper_packaging":             { "label": "Paper & packaging",                         "kg_co2e_per_usd": 0.479, "naics": "322212", "naics_title": "Folding Paperboard Box Manufacturing", "suggested_categories": [1] },
+    "plastics_rubber":             { "label": "Plastics & rubber products",                "kg_co2e_per_usd": 0.450, "naics": "3261",   "naics_title": "Plastics Product Manufacturing", "suggested_categories": [1] },
+    "chemicals":                   { "label": "Chemicals & resins",                        "kg_co2e_per_usd": 1.045, "naics": "325211", "naics_title": "Plastics Material and Resin Manufacturing", "suggested_categories": [1] },
+    "pharmaceuticals":             { "label": "Pharmaceuticals & fine chemicals",          "kg_co2e_per_usd": 0.099, "naics": "325412", "naics_title": "Pharmaceutical Preparation Manufacturing", "suggested_categories": [1] },
+    "metals_products":             { "label": "Metals & metal products",                   "kg_co2e_per_usd": 0.787, "naics": "331110", "naics_title": "Iron and Steel Mills", "suggested_categories": [1] },
+    "cement_concrete":             { "label": "Cement & concrete",                         "kg_co2e_per_usd": 0.606, "naics": "327320", "naics_title": "Ready-Mix Concrete (cement clinker is far higher)", "suggested_categories": [1] },
+    "machinery_equipment":         { "label": "Machinery & industrial equipment",          "kg_co2e_per_usd": 0.220, "naics": "333",    "naics_title": "Machinery Manufacturing", "suggested_categories": [1, 2] },
+    "electronics_computers":       { "label": "Computers & electronics",                   "kg_co2e_per_usd": 0.080, "naics": "334",    "naics_title": "Computer & Electronic Product Manufacturing", "suggested_categories": [1, 2] },
+    "electrical_equipment":        { "label": "Electrical equipment & components",         "kg_co2e_per_usd": 0.160, "naics": "335",    "naics_title": "Electrical Equipment Manufacturing", "suggested_categories": [1, 2] },
+    "furniture":                   { "label": "Furniture & fixtures",                      "kg_co2e_per_usd": 0.220, "naics": "337",    "naics_title": "Furniture Manufacturing", "suggested_categories": [1, 2] },
+    "textiles_apparel":            { "label": "Textiles & apparel",                        "kg_co2e_per_usd": 0.180, "naics": "313/315","naics_title": "Textile & Apparel Manufacturing", "suggested_categories": [1] },
+    "vehicles":                    { "label": "Vehicles (cars, vans, trucks)",             "kg_co2e_per_usd": 0.253, "naics": "336211", "naics_title": "Motor Vehicle Body Manufacturing", "suggested_categories": [1, 2] },
+    "buildings_construction":      { "label": "Buildings & construction works",            "kg_co2e_per_usd": 0.224, "naics": "236220", "naics_title": "Commercial & Institutional Building Construction", "suggested_categories": [2] },
+    "generic_services":            { "label": "Other services (generic)",                  "kg_co2e_per_usd": 0.090, "naics": "—",      "naics_title": "Low-intensity services default", "suggested_categories": [1] },
+    "generic_goods":               { "label": "Other manufactured goods (generic)",        "kg_co2e_per_usd": 0.400, "naics": "—",      "naics_title": "Manufactured goods default", "suggested_categories": [1, 2] },
+    "freight_road":                { "label": "Road freight / trucking",                   "kg_co2e_per_usd": 0.595, "naics": "484",    "naics_title": "General Freight Trucking", "suggested_categories": [4, 9] },
+    "freight_courier_parcel":      { "label": "Courier & parcel delivery",                 "kg_co2e_per_usd": 0.303, "naics": "492110", "naics_title": "Couriers & Express Delivery", "suggested_categories": [4, 9] },
+    "freight_air":                 { "label": "Air freight",                               "kg_co2e_per_usd": 0.644, "naics": "481",    "naics_title": "Air Transportation (freight)", "suggested_categories": [4, 9] },
+    "freight_rail":                { "label": "Rail freight",                              "kg_co2e_per_usd": 0.466, "naics": "482",    "naics_title": "Rail Transportation", "suggested_categories": [4, 9] },
+    "freight_sea":                 { "label": "Sea / water freight",                       "kg_co2e_per_usd": 0.816, "naics": "483",    "naics_title": "Water Transportation (freight)", "suggested_categories": [4, 9] },
+    "warehousing_storage":         { "label": "Warehousing & storage",                     "kg_co2e_per_usd": 0.244, "naics": "493",    "naics_title": "Warehousing & Storage", "suggested_categories": [4, 9] }
+  }
+}
