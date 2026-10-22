@@ -1076,3 +1076,7 @@ Applied throughout and must be maintained:
 - Installed Git + GitHub CLI (winget); authenticated as Sophia-Accenture; `git init` on `main` with origin `https://github.com/edpark12345/SustainSME.git`.
 - First commit (7487016, 177 files) pushed. Stray sync file `.849C9593-*` excluded via `.git/info/exclude` (local only).
 - Files touched: PROJECT_LOG.md (this entry), no app code.
+
+### 2026-10-22 - Vercel deployment config
+- Added `app/vercel.json` (Vite framework, SPA rewrite so react-router deep links work). Vercel project root directory must be `app`. Verified `npm run build` passes locally.
+- Note: `VITE_API_BASE` (app/.env.local, not committed) must be set in Vercel env vars if a hosted backend exists; otherwise the deployed UI has no API.
