@@ -1080,3 +1080,7 @@ Applied throughout and must be maintained:
 ### 2026-10-22 - Vercel deployment config
 - Added `app/vercel.json` (Vite framework, SPA rewrite so react-router deep links work). Vercel project root directory must be `app`. Verified `npm run build` passes locally.
 - Note: `VITE_API_BASE` (app/.env.local, not committed) must be set in Vercel env vars if a hosted backend exists; otherwise the deployed UI has no API.
+
+### 2026-10-22 - First Vercel deploy (personal hobby account)
+- Linked `app/` to new project `sophiacolville-7098/sustain-sme` and deployed to production: https://sustain-sme.vercel.app (Deployment Protection / Vercel login is on). Not the Accenture team project `acn-rx-geek-out/sustain_sme` (account not a team member).
+- GitHub auto-deploy NOT connected (needs a GitHub login connection on the Vercel account); redeploy with `vercel.cmd deploy --prod` from `app/`. `VITE_API_BASE` not set on Vercel, so no backend.
