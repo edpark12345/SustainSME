@@ -1071,3 +1071,8 @@ Applied throughout and must be maintained:
 - `backend/eval/verify_calc.py`: Scope 1 expected value updated to the current factor library —
   DEFRA 2024 gas 2.04542 (was 2.02), AR6 GWP R410A 2256 (was 2088), R22 1960 (was 1810) →
   59.0737 t. Verified: ALL CHECKS PASSED. No engine/factor change.
+
+### 2026-10-22 - Git/GitHub connected
+- Installed Git + GitHub CLI (winget); authenticated as Sophia-Accenture; `git init` on `main` with origin `https://github.com/edpark12345/SustainSME.git`.
+- First commit (7487016, 177 files) pushed. Stray sync file `.849C9593-*` excluded via `.git/info/exclude` (local only).
+- Files touched: PROJECT_LOG.md (this entry), no app code.
